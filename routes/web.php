@@ -32,6 +32,8 @@ Route::get('/usuarios/crear',function(){
 
 
 Route::get('/usuarios/{nombre}/{apellido}/{edad}',function($nombre,$apellido,$edad){
+	$nombre = ucfirst("$nombre");
+	$apellido = ucfirst("$apellido");
 	return "Hola usuario {$nombre} {$apellido} de {$edad}";
 })->where('edad','[0-9]+');
 

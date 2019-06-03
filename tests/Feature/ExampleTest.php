@@ -18,4 +18,39 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+
+    /** @test */
+     function al_cargar_pagina_crear()
+    {
+        $this->get('/usuarios/crear')
+            ->assertStatus(200)
+            ->assertSee('Aqui se crea el usuario');
+    }
+
+
+     /** @test */
+     function usuario_con_codigo()
+    {
+        $this->get('/usuarios/5')
+            ->assertStatus(200)
+            ->assertSee('El usuario numero : 5');
+    }
+
+ /** @test */
+     function usuario_con_nombre_apellido_edad()
+    {
+        $this->get('/usuarios/ed/ra/12')
+            ->assertStatus(200)
+            ->assertSee('Hola usuario Ed Ra de 12');
+    }
+
+/** @test */
+     function usuario_peticion()
+    {
+        $this->get('/user/insertar')
+            ->assertStatus(200)
+            ->assertSee('La peticion fue : insertar');
+    }
+
 }
