@@ -25,6 +25,17 @@ class ExampleTest extends TestCase
     }
 
 
+
+
+    /** @test */
+     function usuarios2listaVacia()
+    {
+        $this->withoutExceptionHandling();
+        $this->get('/usuarios2?vacio')
+            ->assertStatus(200)
+            ->assertSee('No hay Usuarios');
+    }
+
     /** @test */
      function al_cargar_pagina_crear()
     {
