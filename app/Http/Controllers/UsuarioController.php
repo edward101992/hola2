@@ -53,9 +53,17 @@ class UsuarioController extends Controller
 
 */
 
-
+/*
     public function usuarioId($id){
     	return "El usuario numero : {$id}";
+    }
+*/
+    public function UserId2($id){
+       return view ('mostrarUsuarioIdView',compact('id'));
+   }
+
+    public function usuarioId($id){
+        return view ('mostrarUsuarioIdView',compact('id'));
     }
 
     public function usuarioNombreApellidoEdad($nombre,$apellido,$edad){
@@ -63,6 +71,7 @@ class UsuarioController extends Controller
 		$apellido = ucfirst("$apellido");
     	return "Hola usuario {$nombre} {$apellido} de {$edad}";
     }
+
 
     public function preguntaUsuarioDosApellidos($nombre,$apellido,$apellido2=null){
 	    if($apellido2){

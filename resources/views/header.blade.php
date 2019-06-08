@@ -31,7 +31,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   </head>
   <body class="d-flex flex-column h-100">
     <header>

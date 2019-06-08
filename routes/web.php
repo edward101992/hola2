@@ -25,6 +25,8 @@ Route::get('/usuarios', 'UsuarioController@inicio');
 
 Route::get('/usuarios2', 'UsuarioController@inicioUsuario2');
 
+Route::get('usuarios2/{id}','UsuarioController@UserId2');
+
 Route::get('/usuarios/{id}', 'UsuarioController@usuarioId')
 	->where('id','[0-9]+');
 

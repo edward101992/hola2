@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Sticky Footer Navbar Template · Bootstrap</title>
+    <title>Numero usuario @yield('titulaPag') </title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/">
 
@@ -61,12 +61,29 @@
   </nav>
 </header>
 
-<!-- Begin page content -->
+
+
+<!-- Aqui va el contenido de la pagina esclava -->
 <main role="main" class="flex-shrink-0">
 
-@yield('contenidoMain')
+    <div class="row mt-5">
+        <div class="col-8">
+              @yield('contenidoMain')
+        </div>
+        
+        <div class="col-4">
+            @section('sidebar')
+              <h2> BARRA LATERAL</h2>
+            @show
+        </div>
+    </div>
+
+    
 
  </main>
+<!-- Aqui va el contenido de la pagina esclava -->
+
+
 
 <footer class="footer mt-auto py-3">
   <div class="container">

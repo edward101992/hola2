@@ -52,7 +52,7 @@ class ExampleTest extends TestCase
         $this->withoutExceptionHandling();
         $this->get('/usuarios/5')
             ->assertStatus(200)
-            ->assertSee('El usuario numero : 5');
+            ->assertSee('El usuario  : 5');
     }
 
  /** @test */
