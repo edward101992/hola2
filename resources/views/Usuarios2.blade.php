@@ -9,7 +9,12 @@
 	            @foreach ($usuarios2 as $usua2)              
                     <li>
                         {{ $usua2->name}} Correo : {{ $usua2->email }}
-                        <button type="button" class="btn btn-primary">Editar</button>
+                      
+                      <!--  <a class="btn btn-primary" href="{{ url('/usuarios2/'.$usua2->id) }}" role="button">Mostrar </a>
+                      -->
+                      <a class="btn btn-primary" href="{{ action('UsuarioController@UserId2',['id'=>$usua2->id]) }}">Mostrar</a>
+                      
+                        
                         <button type="button" class="btn btn-success">Insertar</button>
                         <button type="button" class="btn btn-danger">Eliminar</button>
                    </li>
