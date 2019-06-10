@@ -18,7 +18,7 @@
         <ul>
             <?php foreach ($users as $usuarios):?>
                 <li>
-                    <?= e($usuarios->name) ?> EMAIL  : <?= e($usuarios->email) ?>;
+                    <?= e($usuarios->name) ?> EMAIL  : <?= e($usuarios->email)?>;
 
               </li>
                 <?php endforeach; ?>

@@ -41,7 +41,6 @@ class UsuarioController extends Controller
 //    return view('Usuarios')
 //    ->with('users',User::all())
 //    ->with('titulo','Usuarios con ELOQUENT');
-//    
  }
 
 /*
@@ -93,11 +92,15 @@ class UsuarioController extends Controller
         return view('Usuarios2',compact('titulo','usuarios2'));
     }
     public function UserId2($id){
-       return view ('mostrarUsuarioIdView',compact('id'));
+       $usuario2 = User::find($id);
+       return view ('mostrarUsuario2',compact('usuario2'));
    }
 
+
     public function usuarioId($id){
-        return view ('mostrarUsuarioIdView',compact('id'));
+
+        $meme = "ffffff";
+        return view ('mostrarUsuarioIdView',compact('id', 'meme'));
     }
 
     public function usuarioNombreApellidoEdad($nombre,$apellido,$edad){

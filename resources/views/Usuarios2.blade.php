@@ -9,6 +9,9 @@
 	            @foreach ($usuarios2 as $usua2)              
                     <li>
                         {{ $usua2->name}} Correo : {{ $usua2->email }}
+                        <button type="button" class="btn btn-primary">Editar</button>
+                        <button type="button" class="btn btn-success">Insertar</button>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
                    </li>
                     <hr>
 	             @endforeach

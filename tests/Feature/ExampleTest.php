@@ -18,9 +18,8 @@ class ExampleTest extends TestCase
         $this->get('/usuarios')
             ->assertStatus(200)
             ->assertSee('Usuarios')
-            ->assertSee('juan')
-            ->assertSee('maria')
-            ->assertSee('pedro');
+            ->assertSee('jorge')
+            ->assertSee('mario');
            
     }
 
