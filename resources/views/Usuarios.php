@@ -12,11 +12,15 @@
 
        
     </head>
+   
     <body>
         <h1> <?= e($titulo)?> </h1>
         <ul>
-            <?php foreach ($usuarios as $usuarios):?>
-                <li><?= e($usuarios) ?> </li>
+            <?php foreach ($users as $usuarios):?>
+                <li>
+                    <?= e($usuarios->name) ?> EMAIL  : <?= e($usuarios->email) ?>;
+
+              </li>
                 <?php endforeach; ?>
                 <?php>
                 

@@ -7,6 +7,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    protected $table = 'users'; /// esto se debe hacer para manejar consultas con ELOQUENT
+                              /// siempre q no se siga con el modelo standar de nombrar las cosas
     use Notifiable;
 
     /**
